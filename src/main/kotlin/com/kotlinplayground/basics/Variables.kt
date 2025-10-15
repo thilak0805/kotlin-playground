@@ -14,4 +14,26 @@ fun main(){
     age = 35
     println(age)
 
+    //kotlin has the concept of type inference, even release that feature in java11 LVTI
+    //val salary : Long = 30000L
+
+    val salary = 30000L
+    println(salary)
+
+    val course = "Kotlin Spring"
+
+    //below concept is called string interpolation or string templates
+    println("course : $course and the course length is ${course.length}")
+
+    //multi line
+    val multiline = "ABC \n DEF"
+
+    println(multiline)
+
+    val multiline1 = """
+        ABC
+        DEF
+        """.trimIndent()
+    println(multiline1)
+
 }
