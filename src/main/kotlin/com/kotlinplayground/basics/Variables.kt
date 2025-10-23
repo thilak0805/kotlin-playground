@@ -1,5 +1,8 @@
 package org.modules.com.kotlinplayground.basics
 
+import org.modules.com.kotlinplayground.functions.courseName
+import org.modules.com.kotlinplayground.functions.topLevelFunction
+
 fun main(){
     //immutable
     val name : String = "Daya"
@@ -35,5 +38,9 @@ fun main(){
         DEF
         """.trimIndent()
     println(multiline1)
+
+    val num = topLevelFunction()
+    println("Num is $num")
+    println("Constant name is $courseName")
 
 }
