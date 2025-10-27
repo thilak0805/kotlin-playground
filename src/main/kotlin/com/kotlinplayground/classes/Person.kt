@@ -8,6 +8,17 @@ package org.modules.com.kotlinplayground.classes
 
 class Person(val name : String = "",
     val age : Int = 0) {
+
+    // secondary constructor to pass email
+    // while printing, since we are able to print only email, we need to print name,age. inorder to initialize the default constructor
+    // person, we are using 'this' keyword to initialize name and age
+    var email : String = ""
+    constructor(_email : String,
+        _name : String ="",
+        _age : Int = 0) :this(_name, _age) {
+        email = _email
+
+    }
     fun action(){
         println("Person Walks")
     }
@@ -25,5 +36,10 @@ fun main(){
     // its a kind of overloaded constructor, if we pass value it will take it, otherwise it will take default value
     val person1 = Person()
     println("Default Name : ${person1.name} and the Default Age is : ${person1.age}")
+
+    // here we are using named parameter concept to invoke the constructor which is having email parameter
+    val person2 = Person(_email = "abc@gmail.com","Alex",25)
+    println("person2  Name : ${person2.name}  and the person2 Age is : ${person2.age}" +
+            "and the person2 email is :${person2.email}")
 
 }
