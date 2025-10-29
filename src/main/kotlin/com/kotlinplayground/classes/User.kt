@@ -1,5 +1,6 @@
 package org.modules.com.kotlinplayground.classes
 
+// if we remove open identifier, this class cannot be extendable, it cannot be subclassed
 open class User(val name : String) {
     fun login(){
         println("inside user login")
